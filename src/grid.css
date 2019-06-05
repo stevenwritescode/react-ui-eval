@@ -1,0 +1,60 @@
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.row {
+    flex: 1 1 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.value {
+    flex: 1 1 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid black;
+}
+
+.color0 {
+    background: red;
+}
+.color1 {
+    background: green;
+}
+.color2 {
+    background: blue;
+}
+.color3 {
+    background: yellow;
+}
+.color4 {
+    background: orange;
+}
+.color5 {
+    background: purple;
+}
+.color6 {
+    background: brown;
+}
+.color7 {
+    background: pink;
+}
+.color8 {
+    background: gray;
+}
+.color9 {
+    background: aquamarine;
+}
