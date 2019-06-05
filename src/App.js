@@ -1,11 +1,9 @@
 import React from 'react';
-import './App.css';
+import NumberBoard from './containers/NumberBoard.jsx';
 
 function App() {
   return (
-    <div className="App">
-      Code goes here!
-    </div>
+    <NumberBoard/>
   );
 }
 
