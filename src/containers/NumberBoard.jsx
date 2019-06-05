@@ -14,25 +14,65 @@ class NumberBoard extends React.Component {
     this.setState({ numbers: getArray() });
   }
 
-  render() {
+  renderNumberCard(num, rowIndex) {
     const { numbers } = this.state;
-    const randomHex = () => "#" + Math.floor(Math.random() * 16777215).toString(16);
     return (
-      <div style={{ height: "100%", width: "100%" }}>
-        {numbers.map((num, index) => {
+      <div key={rowIndex} style={{ display: "flex", flex: "1", flexDirection: "row" }}>
+        {num.map((nestedNum, colIndex) => {
+          const color = [];
+          const getColor = () => {
+            for (var i = 0; i < 3; i++) {
+              color.push(Math.floor(Math.random() * 255));
+            }
+            return color;
+          };
+          const randomColor = () => `rgb(${getColor()})`;
           return (
-            <div key={index} style={{ display: "flex", flexDirection: "row" }}>
-              {num.map((nestedNum) => {
-                return (
-                  <Paper style={{ display: "flex", flex: "1 1 auto", backgroundColor: randomHex(), color: "#FFF" }}>
-                    <Text align="center" style={{padding: 20}}>{nestedNum}</Text>
-                  </Paper>
-                );
-              })}
-            </div>
+            <Paper
+              key={colIndex}
+              style={{
+                display: "flex",
+                position: "relative",
+                justifyContent: "center",
+                alignItems: "center",
+                flex: "1",
+                backgroundColor: randomColor(),
+                color: "white",
+                textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+              }}
+            >
+              <Text variant="h2">{nestedNum}</Text>
+
+              <Text variant="caption" style={{ position: "absolute", top: 2 }}>
+                {rowIndex > 0 ? nestedNum + numbers[rowIndex - 1][colIndex] : nestedNum + numbers[numbers.length - 1][colIndex]}
+              </Text>
+
+              <Text variant="caption" style={{ position: "absolute", left: 2 }}>
+                {colIndex > 0 ? nestedNum + numbers[rowIndex][colIndex - 1] : numbers[rowIndex][num.length-1]}
+              </Text>
+
+              <Text variant="caption" style={{ position: "absolute", right: 2 }}>
+                {colIndex < num.length - 1 ? nestedNum + numbers[rowIndex][colIndex + 1] : nestedNum + numbers[rowIndex][0]}
+              </Text>
+
+              <Text variant="caption" style={{ position: "absolute", bottom: 2 }}>
+                {rowIndex < numbers.length - 1 ? nestedNum + numbers[rowIndex + 1][colIndex] : numbers[0][colIndex]}
+              </Text>
+            </Paper>
           );
         })}
       </div>
+    );
+  }
+
+  render() {
+    const { numbers } = this.state;
+    return (
+      <section style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", flex: 1, height: "100%" }}>
+        {numbers.map((num, rowIndex) => {
+          return this.renderNumberCard(num, rowIndex);
+        })}
+      </section>
     );
   }
 }
