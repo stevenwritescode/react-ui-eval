@@ -11,8 +11,6 @@ should be used to generate a new array each time the page is loaded.
 Using the React framework, each nested array should then be used to generate a row of React elements.  The result should be
 a 10x10 full-window grid of boxes with integers.
 
-Commit your files to a separate branch of your choosing.
-
 ----
 
 Stretch goal 1:  Make each integer box have a unique background color for their integer, so 1 = blue, 2 = green, etc.
