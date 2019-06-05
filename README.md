@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 7 Factor React UI Evaluation
 
-## Available Scripts
+## Objective
 
-In the project directory, you can run:
+The goal is to take an input of nested arrays filled with single digit integers and translate
+them as a grid of boxes, each displaying their integer value, within the browser window.
 
-### `npm start`
+A file, randomArray.js, is included in /src.  This file's exported method 'getArray()', which returns an array of nested arrays,
+should be used to generate a new array each time the page is loaded.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Using the React framework, each nested array should then be used to generate a row of React elements.  The result should be
+a 10x10 full-window grid of boxes with integers.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Commit your files to a seperate branch of your choosing.
 
-### `npm test`
+----
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Stretch goal 1:  Make each integer box have a unique background color for their integer, so 1 = blue, 2 = green, etc.
 
-### `npm run build`
+Stretch goal 2: At the border of each box that bounds another, display the two boxes sum total along their border.
+I.E: If a box with 2 has a box with 6 to the right, the number 8 would display somewhere along that border.  Same for above and below.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Stretch goal 3: Provide a button that sorts the grid by descending integers
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## To install and run
 
-### `npm run eject`
+Clone this repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Yarn start
