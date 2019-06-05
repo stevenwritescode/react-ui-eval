@@ -15,7 +15,7 @@ a 10x10 full-window grid of boxes with integers.
 
 Stretch goal 1:  Make each integer box have a unique background color for their integer, so 1 = blue, 2 = green, etc.
 
-Stretch goal 2: At the border of each box that bounds another, display the two boxes sum total along their border.
+Stretch goal 2: At the border of each box where it bounds another, display the two boxes sum total along their border.
 I.E: If a box with 2 has a box with 6 to the right, the number 8 would display somewhere along that border.  Same for above and below.
 
 Stretch goal 3: Provide a button that sorts the grid by descending integers
