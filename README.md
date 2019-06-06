@@ -3,7 +3,12 @@
 ## Notes from Steven
 
 `master` contains the work that was completed on this challenge in the first hour. 
+
 The `completed` branch has the fully completed challenge, which took another couple of hours with some refactoring.
+
+The `getting-carried-away` branch has some more fun features that I thought would be fun and developed on my own.
+
+A demo of the final result can be found here: https://stevenwritescode.github.io/react-ui-eval/
 
 ## Objective
 
