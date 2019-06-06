@@ -1,5 +1,10 @@
 # 7 Factor React UI Evaluation
 
+## Notes from Steven
+
+`master` contains the work that was completed on this challenge in the first hour. 
+The `completed` branch has the fully completed challenge, which took another couple of hours with some refactoring.
+
 ## Objective
 
 The goal is to take an input of nested arrays filled with single digit integers and translate
